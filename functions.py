@@ -31,9 +31,8 @@ def motif_f_parser(motifs_f):
     '''
     mk dict where key is motif and list with original len and re motif is value
     '''
-    ref_d = {'a':'[aA]','t':'[tT]','c':'[cC]','g':'[gG]','y':'[ct]','u':'[t]'}
+    ref_d = {'a':'[aA]','t':'[tT]','c':'[cC]','g':'[gG]','y':'[cCtT]','u':'[tT]'} #u could be c?
     motif_d = {} #{ori_motif:[len_motif, re_motif]}
-    # info = []
     for line in motifs_f:
         motif = line.lower().strip()
         len_motif = len(motif)
