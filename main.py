@@ -123,6 +123,17 @@ for record_obj in record_obj_l:
 
 #make legend
 counter = 1
+context.set_line_width(10)
+context.set_source_rgb(0, 0, 0)
+context.move_to( longest_seq + margin + tb_margin, header + 20 * counter ) #x,y
+context.line_to( longest_seq + margin + tb_margin, (header + 20 * counter) + 10 ) #x,y
+context.stroke()
+context.set_source_rgb(0.0, 0.0, 0.0)
+context.move_to(longest_seq + margin + tb_margin + 15, (header + 20 * counter) + 10 - 2)
+context.show_text('exon')
+context.stroke()
+
+counter = 2
 for motif in color_d:
     context.set_line_width(10)
     context.set_source_rgb(color_d[motif][0], color_d[motif][1], color_d[motif][2])
